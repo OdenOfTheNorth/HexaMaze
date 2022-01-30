@@ -8,12 +8,8 @@ namespace HexaMaze
     
 public class MazeHexa : MonoBehaviour
 {
-[SerializeField]
-        float radius = 10f;
-
-        // temporary hack
         [SerializeField]
-        int count = 15;
+        float radius = 10f;
 
         [SerializeField]
         MazeCellHexa cellPrefabHexa = null;
@@ -33,9 +29,7 @@ public class MazeHexa : MonoBehaviour
 
         public void Generate() //IEnumerator
         {
-            //WaitForSeconds delay = new WaitForSeconds(generationStepDelay);
             cells.Clear();
-            //Vector2 coord = RandomCoordinateHexa;
 
             List<MazeCellHexa> activeCells = new List<MazeCellHexa>();
             FirstGenerationStep(activeCells);
